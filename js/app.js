@@ -1,10 +1,6 @@
-const hamburger = document.querySelector(
-  ".header .nav-bar .nav-list .hamburger"
-);
-const mobile_menu = document.querySelector(".header .nav-bar .nav-list ul");
-const menu_item = document.querySelectorAll(
-  ".header .nav-bar .nav-list ul li a"
-);
+const hamburger = document.querySelector(".header .nav .NavLista .PontoFlutuante");
+const mobile_menu = document.querySelector(".header .nav .NavLista ul");
+const menu_item = document.querySelectorAll(".header .nav .NavLista ul li a");
 const header = document.querySelector(".header.container");
 
 hamburger.addEventListener("click", () => {

@@ -25,7 +25,7 @@ function checkInputs() {
   if (emailValue === "") {
     setErrorFor(email, "Campo Obrigatorio...");
   } else if (!checkEmail(emailValue)) {
-    setErrorFor(email, "Por favor, insira um email válido.");
+    setErrorFor(email, "Formato de email Inválido!");
   } else {
     setSuccessFor(email);
   }
@@ -52,27 +52,39 @@ function checkInputs() {
     return formControl.className === "form-control success";
   });
 
+  form.addEventListener("reset", (e) => {
+    e.preventDefault();
+
+    resetIntput();
+  });
+
+  function resetIntput() {
+    usernameValue = "";
+    emailValue = "";
+    passwordValue = "";
+    passwordConfirmationValue = "";
+  }
+
   if (formIsValid) {
     window.location.href = "../paginas/inicio.html";
-    window.alert("Bem Vindo" + " " + username.value);
+    window.alert(
+      "Bem Vindo" +
+        " " +
+        username.value +
+        "\nOs dados foram cadastrados com sucesso!"
+    );
   }
 }
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
   const small = formControl.querySelector("small");
-
-  // Adiciona a mensagem de erro
   small.innerText = message;
-
-  // Adiciona a classe de erro
   formControl.className = "form-control error";
 }
 
 function setSuccessFor(input) {
   const formControl = input.parentElement;
-
-  // Adicionar a classe de sucesso
   formControl.className = "form-control success";
 }
 
