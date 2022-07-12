@@ -66,7 +66,7 @@ function checkInputs() {
   }
 
   if (formIsValid) {
-    window.location.href = "./paginas/inicio.html";
+    window.location.href = "./paginas/firtPage.html";
     window.alert(
       "Bem Vindo" +
         " " +
