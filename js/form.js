@@ -66,7 +66,7 @@ function checkInputs() {
   }
 
   if (formIsValid) {
-    window.location.href = "../paginas/firtPage";
+    window.location.href = "https://josue1719.github.io/MyPersonalPage/paginas/firtPage.html";
     window.alert(
       "Bem Vindo" +
         " " +
